@@ -1,0 +1,16 @@
+Command for migration
+
+add-migration Init
+update-database
+
+If any field is modified
+
+add-migration ADDTestToDish
+update-database
+
+
+In the controller - GetAll
+We reference the application layer in form of service which is then relied on abstraction  from the domain module for the repository  and
+the concrete implemnetation was added in the infrastructure module.
+
+
