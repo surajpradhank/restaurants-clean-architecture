@@ -6,7 +6,7 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants
 
 ###
 
-GET {{Restaurants.API_HostAddress}}/api/restaurants/3
+GET {{Restaurants.API_HostAddress}}/api/restaurants/4
 
 ###
 
@@ -14,15 +14,31 @@ POST {{Restaurants.API_HostAddress}}/api/restaurants
 Content-Type: application/json
 
 {
-  "Name": "Chinese WOK",
-  "Description": "Fried RIce",
-  "Category": "abc",
+  "Name": "Biriyani 2",
+  "Description": "Boiled",
+  "Category": "Indian",
   "HasDelivery": true,
-  "ContactEmail": "Test",
-  "ContactNUmber": "234643",
+  "ContactEmail": "Test@gmail.com",
+  "ContactNUmber": "2345678901",
   "City": "London",
   "Street": "WC2N 5ert",
   "PostalCode": "WC2N 5DU"
+}
+
+###
+
+DELETE {{Restaurants.API_HostAddress}}/api/restaurants/6
+
+###
+
+PATCH {{Restaurants.API_HostAddress}}/api/restaurants/8
+Content-Type: application/json
+
+{
+  "Name": "Biriyani 3",
+  "Description": "Spicy",
+  "HasDelivery": true
+
 }
 
 ###
