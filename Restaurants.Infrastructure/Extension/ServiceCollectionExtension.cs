@@ -13,7 +13,7 @@ public static class ServiceCollectionExtension
     public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
         string connectionString = configuration.GetConnectionString("RestaurantDb");
-        services.AddDbContext<RestaurantsDbContext>(option => option.UseSqlServer(connectionString));
+        services.AddDbContext<RestaurantsDbContext>(option => option.UseSqlServer(connectionString).EnableSensitiveDataLogging());
 
         AddSCopedServices(services);
     }

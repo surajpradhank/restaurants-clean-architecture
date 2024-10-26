@@ -6,7 +6,7 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants
 
 ###
 
-GET {{Restaurants.API_HostAddress}}/api/restaurants/4
+GET {{Restaurants.API_HostAddress}}/api/restaurants/2
 
 ###
 
@@ -31,7 +31,7 @@ DELETE {{Restaurants.API_HostAddress}}/api/restaurants/6
 
 ###
 
-PATCH {{Restaurants.API_HostAddress}}/api/restaurants/8
+PATCH {{Restaurants.API_HostAddress}}/api/restaurants/7
 Content-Type: application/json
 
 {

@@ -14,3 +14,12 @@ We reference the application layer in form of service which is then relied on ab
 the concrete implemnetation was added in the infrastructure module.
 
 
+Serlilog
+
+LogLevel - Verbose, Debug, Information, Warning, Error, Fatal
+Formatting - JSON, XML formatters or defining log template
+Enrichers - Add, remove and modify the properties associated with events
+Sinks - Destination where the events will be stored
+Filters - Rule to capture or omit some logs
+Structuring - how to log complex objects
+
