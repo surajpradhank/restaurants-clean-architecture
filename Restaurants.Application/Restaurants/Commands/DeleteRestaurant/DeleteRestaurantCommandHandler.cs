@@ -13,7 +13,7 @@ namespace Restaurants.Application.Restaurants.Commands.DeleteRestaurant
         {
             logger.LogInformation($"Deleting restaurant with id : {request.Id}");
 
-            var restaurant = await restaurantsRepository.GetByIdAsync(request.Id) ?? 
+            var restaurant = await restaurantsRepository.GetByIdAsync(request.Id) ??
                         throw new NotFoundException(nameof(Restaurant), request.Id.ToString());
 
             await restaurantsRepository.Delete(restaurant);

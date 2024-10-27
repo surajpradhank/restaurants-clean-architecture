@@ -1,5 +1,8 @@
 ﻿@Restaurants.API_HostAddress = https://localhost:7282
 
+
+####    Restaurant     #####
+
 ###
 
 GET {{Restaurants.API_HostAddress}}/api/restaurants
@@ -40,5 +43,31 @@ Content-Type: application/json
   "HasDelivery": true
 
 }
+
+###
+
+#####  Dish   #####
+
+POST {{Restaurants.API_HostAddress}}/api/restaurants/3/dishes
+Content-Type: application/json
+
+{
+  "Name":"Paneer Manchurian",
+  "Description":"Chenese food",
+  "Price":280,
+  "KiloCalories": 370
+}
+
+###
+
+GET {{Restaurants.API_HostAddress}}/api/restaurants/3/dishes
+
+###
+
+GET {{Restaurants.API_HostAddress}}/api/restaurants/3/dishes/10
+
+###
+
+DELETE {{Restaurants.API_HostAddress}}/api/restaurants/1/dishes
 
 ###

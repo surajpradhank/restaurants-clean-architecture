@@ -12,15 +12,16 @@ public static class ServiceCollectionExtension
 {
     public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
-        string connectionString = configuration.GetConnectionString("RestaurantDb");
+        var connectionString = configuration.GetConnectionString("RestaurantDb");
         services.AddDbContext<RestaurantsDbContext>(option => option.UseSqlServer(connectionString).EnableSensitiveDataLogging());
 
-        AddSCopedServices(services);
+        AddScopedServices(services);
     }
 
-    private static void AddSCopedServices(IServiceCollection services)
+    private static void AddScopedServices(IServiceCollection services)
     {
         services.AddScoped<IRestaurantSeeder, RestaurantSeeder>();
         services.AddScoped<IRestaurantsRepository, RestaurantsRepository>();
+        services.AddScoped<IDishesRepository, DishesRepository>();
     }
 }

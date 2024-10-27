@@ -11,12 +11,12 @@ public class RequestTimeMiddleware(ILogger<RequestTimeMiddleware> logger) : IMid
         await next.Invoke(context);
         stopWatch.Stop();
 
-        if(stopWatch.ElapsedMilliseconds/1000 > 4)
+        if (stopWatch.ElapsedMilliseconds / 1000 > 4)
         {
             logger.LogInformation("Request {verb} at {Path} took {Time} s",
                                    context.Request.Method,
                                    context.Request.Path,
-                                   stopWatch.ElapsedMilliseconds/1000);
+                                   stopWatch.ElapsedMilliseconds / 1000);
         }
     }
 }
