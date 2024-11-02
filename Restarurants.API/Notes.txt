@@ -23,3 +23,14 @@ Sinks - Destination where the events will be stored
 Filters - Rule to capture or omit some logs
 Structuring - how to log complex objects
 
+
+
+After making changes for Indetity 
+
+add database migration  - add-migration IdentityAdded then update-database 
+
+
+.Net Identity https://andrewlock.net/exploring-the-dotnet-8-preview-introducing-the-identity-api-endpoints/
+
+
+

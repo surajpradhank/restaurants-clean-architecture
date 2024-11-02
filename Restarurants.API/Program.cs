@@ -1,5 +1,7 @@
+using Restaurants.API.Extensions;
 using Restaurants.API.Middleware;
 using Restaurants.Application.Extension;
+using Restaurants.Domain.Entities;
 using Restaurants.Infrastructure.Extension;
 using Restaurants.Infrastructure.Seeders;
 using Serilog;
@@ -8,17 +10,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
-builder.Services.AddSwaggerGen();
-
-builder.Services.AddScoped<ExceptionHandlingMiddleware>();
-builder.Services.AddScoped<RequestTimeMiddleware>();
+builder.AddPresentation();
 
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication();
-
-builder.Host.UseSerilog((context, configuration) =>
-    configuration.ReadFrom.Configuration(context.Configuration));
 
 var app = builder.Build();
 
@@ -38,6 +33,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.MapGroup("api/Identity").WithTags("Identity").MapIdentityApi<User>();
 
 app.UseAuthorization();
 

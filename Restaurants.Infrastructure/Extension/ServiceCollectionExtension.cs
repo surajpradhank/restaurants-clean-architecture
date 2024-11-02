@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Restaurants.Domain.Entities;
 using Restaurants.Domain.Repository;
 using Restaurants.Infrastructure.Persistence;
 using Restaurants.Infrastructure.Repositories;
@@ -15,6 +16,8 @@ public static class ServiceCollectionExtension
         var connectionString = configuration.GetConnectionString("RestaurantDb");
         services.AddDbContext<RestaurantsDbContext>(option => option.UseSqlServer(connectionString).EnableSensitiveDataLogging());
 
+        // Register EF stores -> repository for user  and roles and AddIdentityApiEndpoints - identity endpoint
+        services.AddIdentityApiEndpoints<User>().AddEntityFrameworkStores<RestaurantsDbContext>();
         AddScopedServices(services);
     }
 
