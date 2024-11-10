@@ -1,11 +1,11 @@
-﻿@Restaurants.API_HostAddress = https://localhost:7282
+﻿ @Restaurants.API_HostAddress = http://localhost:5001
 @token = CfDJ8L5DWrGvpS5HqY3lzUdga0cOnNBLIPBsdNo5QS0__65BM54-qmuuCA1fSR-pacvJSby2lTyl-pNb7kytlve-npg7k8TL4OxktG1i6SsqVe42VoMmU2IttVrB_eBPA2Tmpvgv5Jb-rQrl1kITEkJ5Sb6WVlj1WuqYtkwlbR8jQemy1cASF0yErAqWpxUZ4Y_NsfgbQzdQlp2q-NCtcS5fYPJEHukoYtd8MVuza-ncR1ySNKUjRLXx_47YzK-mldyLt6nXCWt_p7iLuDGJHUInTjgadvnVZV9w9ERYjlt24eM6EfpEedOFqKgmasSmNsriAC6Wt015FRmEhLtBx9F0OOaPRMaXjzydidNCVc68KnuFLHJrLcbmVZskR3sztGYcq2Gp5uQSXtVcydZbHA-23YV2KwweD-wxKxPvnMpo3QQ2vixVPZyfERaHbo0W9gt36qPMPmv1TGAjblvAMPxnCAIgduzl72Npmv2bXSwkgGj-Y2vr6jrotDapnrfOUT75-whdCIq17vKVrFgXJab7WxE686PzXLpYAukk90EhbVnBMTYTLcwpVv9qWRL8O4WzbFpjow5EJ_xdopfjOt39LJslvQWGnKHMIw6PwER8ZRDX4mBlmWsgnZdtCF8h-7xd8oub-8CradfU7wMbUEB2ugk5TOxq77aNzot3d1OlONnzAEIBEcTpsYNwHgleRqz2cA
 
 ####    Restaurant     #####
 
 ###
 
-GET {{Restaurants.API_HostAddress}}/api/restaurants
+GET {{Restaurants.API_HostAddress}}/api/restaurants?pageSize=5&pageNumber=1&sortBy=Name&sortDirection=Ascending
 Authorization:  Bearer {{token}}
 
 ###
