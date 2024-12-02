@@ -7,7 +7,7 @@ using Restaurants.Domain.Repository;
 
 namespace Restaurants.Application.Restaurants.Commands.UpdateRestaurant;
 
-public class UpdateRestaurantCommandHandler(ILogger<UpdateRestaurantCommand> logger,
+public class UpdateRestaurantCommandHandler(ILogger<UpdateRestaurantCommandHandler> logger,
                                             IMapper mapper,
                                             IRestaurantsRepository restaurantsRepository) : IRequestHandler<UpdateRestaurantCommand>
 {

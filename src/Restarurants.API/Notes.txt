@@ -1,0 +1,39 @@
+Command for migration
+
+add-migration Init
+update-database
+
+If any field is modified
+
+add-migration ADDTestToDish
+update-database
+
+
+In the GetAll method within the controller,
+We reference the application layer through a service. This service depends on an abstraction in the domain module for the repository, while the concrete implementation is provided by the infrastructure module.
+
+Serlilog
+
+LogLevel - Verbose, Debug, Information, Warning, Error, Fatal
+Formatting - JSON, XML formatters or defining log template
+Enrichers - Add, remove and modify the properties associated with events
+Sinks - Destination where the events will be stored
+Filters - Rule to capture or omit some logs
+Structuring - how to log complex objects
+
+After making changes for Indetity 
+
+add database migration  - add-migration IdentityAdded then update-database 
+
+
+.Net Identity https://andrewlock.net/exploring-the-dotnet-8-preview-introducing-the-identity-api-endpoints/
+
+
+Unit Test Cases
+
+To test a class with an internal access modifier, we can either change its access to public (though this is generally not recommended) or make use of the 'InternalsVisibleTo' attribute in the assembly to allow access to the internal members from the test project."
+
+The key word here is 'InternalsVisibleTo' attribute, which allows access without modifying access levels directly.
+Ex - [assembly: InternalsVisibleTo("Restaurants.Infrastructure.Tests")]
+
+
